@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="style.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,
         600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
-        integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
@@ -186,7 +184,8 @@
                     <img src="images/udemy.webp" alt="">
                     <h3>The Complete 2024 Web Development Bootcamp</h3>
                     <p>
-                        The <strong>Complete 2024 Web Development Bootcamp</strong> by Angela Yu is a comprehensive online course that
+                        The <strong>Complete 2024 Web Development Bootcamp</strong> by Angela Yu is a comprehensive
+                        online course that
                         takes beginners to proficient web developers. Covering HTML, CSS, JavaScript, Node.js, React,
                         and PostgreSQL, the course combines video lectures, practical exercises, and real-world
                         projects. What is most important is that each lesson that is being teached is applied.
@@ -263,19 +262,26 @@
             <p>If there is any issue, you can provide your name, email, and the message regarding the issue.</p>
             <form id="contactForm" action="mailto:hatem.bassah@gmail.com" method="post" enctype="text/plain"
                 class="form-container">
+                <label for="">Contact Form</label>
+                <br><br><br>
+
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Name" class="user-input">
+                </div>
                 <br>
-                <label for="name">Name</label><br><br><br>
-                <input type="text" class="userInput" id="name" name="name" required><br><br><br>
 
-                <label for="email">Email</label><br><br><br>
-                <input type="email" class="userInput" id="email" name="email" required><br><br><br>
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" class="user-input">
+                </div>
+                <br>
+                <textarea name="" id="message" cols="30" rows="10" class="user-input" placeholder="Your Message"></textarea><br>
 
-                <label for="message">Message</label><br><br><br>
-                <textarea class="userInput" id="message" name="message" rows="4" required></textarea><br><br><br>
-
-                <button type="submit" class="submit-button">Submit</button>
+                <button type="button" class="submit-button">Submit</button>
             </form>
-            <br><br><br>
+            </form>
+            <br><br><br><br>
             <footer>
                 <br>
                 <p id="copyright">&copy; 2024 Hatim Bassa. All rights reserved.</p>
