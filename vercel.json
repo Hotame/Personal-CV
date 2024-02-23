@@ -1,0 +1,5 @@
+{
+    "redirects": [
+      {"source": "/submit", "destination": "https://personal-cv-three.vercel.app/submit"}
+    ]
+  }
