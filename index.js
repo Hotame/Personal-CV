@@ -6,14 +6,13 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-const port = process.env.PORT || 3000; // Update the port to use the environment variable
+const port = process.env.PORT || 3000; // Use the provided PORT or default to 3000
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, 'public')));
-app.use('/images', express.static(join(__dirname, 'images')));
 
 app.get('/', (req, res) => {
-    res.sendFile(join(__dirname, 'public', 'index.html')); // Update the path to include the 'public' directory
+    res.sendFile(join(__dirname, 'public', 'index.html'));
 });
 
 app.post('/submit', (req, res) => {
