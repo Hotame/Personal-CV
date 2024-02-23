@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
+app.get('/:match*', (req, res) => {
     res.sendFile(join(__dirname, 'public', 'index.html'));
 });
 
