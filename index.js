@@ -36,7 +36,6 @@ app.post('/', (req, res) => {
         if (error) {
             return console.error(error);
         }
-        res.redirect('/');
     });
 });
 
