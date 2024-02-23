@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'index.html'));
 });
 
-app.post('/submit', (req, res) => {
+app.post('/Personal-CV/submit', (req, res) => {
     const { email, message } = req.body;
     console.log(req.body);
 
