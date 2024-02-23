@@ -1,5 +1,13 @@
 {
-    "redirects": [
-      {"source": "/submit", "destination": "https://personal-cv-three.vercel.app/submit"}
-    ]
-  }
+  "headers": [
+    {
+      "source": "/submit",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}
