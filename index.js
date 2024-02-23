@@ -9,8 +9,8 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('/public'));
-app.use('/images', express.static('/images'));
+app.use(express.static('https://personal-cv-eta.vercel.app' + '/public'));
+app.use('/images', express.static('https://personal-cv-eta.vercel.app' + '/images'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
