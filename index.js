@@ -13,7 +13,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, 'public')));
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
+    res.sendFile(join(__dirname, 'public', 'index.html'));
+});
+
+app.post('/submit', (req, res) => {
     const { name, email, message } = req.body;
     console.log(req.body);
 
@@ -36,6 +40,7 @@ app.post('/', (req, res) => {
         if (error) {
             return console.error(error);
         }
+        res.redirect('/');
     });
 });
 
