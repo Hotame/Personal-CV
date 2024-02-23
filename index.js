@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-const port = process.env.PORT || 3000; // Use the provided PORT or default to 3000
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    const { email, message } = req.body;
+    const { name, email, message } = req.body;
     console.log(req.body);
 
     const transporter = nodemailer.createTransport({
@@ -32,7 +32,7 @@ app.post('/', (req, res) => {
     const mail = {
         from: email,
         to: 'hatem.bassah@gmail.com',
-        subject: '',
+        subject: `Message from ${name}`,
         text: `${message}`
     };
 
@@ -42,6 +42,10 @@ app.post('/', (req, res) => {
         }
         res.redirect('/');
     });
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(port, () => {
