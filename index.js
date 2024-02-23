@@ -13,11 +13,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, 'public')));
 
-app.get('/:match*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'public', 'index.html'));
 });
 
-app.post('/submit', (req, res) => {
+app.post('/', (req, res) => {
     const { email, message } = req.body;
     console.log(req.body);
 

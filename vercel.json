@@ -1,7 +1,0 @@
-{
-    "rewrites": [
-      {"source": "/submit", "destination": "http://localhost:3000/submit"},
-      {"source": "/:match*", "destination": "http://localhost:3000/:match*"}
-    ]
-  }
-  
