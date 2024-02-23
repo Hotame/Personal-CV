@@ -9,14 +9,14 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/public'));
-app.use('/images', express.static(__dirname + '/images'));
+app.use(express.static('/public'));
+app.use('/images', express.static('/images'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/public/submit', (req, res) => {
+app.post('/submit', (req, res) => {
     const {email, message } = req.body;
     console.log(req.body);
 
