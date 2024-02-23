@@ -1,6 +1,5 @@
 {
-    "rewrites": [
-      {"source": "/", "destination": "https://personal-cv-three.vercel.app"},
-      {"source": "/submit", "destination": "https://personal-cv-three.vercel.app/submit"}
-    ]
-  }
+  "rewrites": [
+    { "source": "/", "destination": "https://personal-cv-three.vercel.app" }
+  ]
+}
