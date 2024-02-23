@@ -1,8 +1,8 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
-import { dirname, join } from "path";
-import { fileURLToPath } from "url";
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'index.html'));
 });
 
-app.post('/Personal-CV/submit', (req, res) => {
+app.post('/submit', (req, res) => {
     const { email, message } = req.body;
     console.log(req.body);
 
