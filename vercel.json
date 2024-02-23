@@ -1,5 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "https://personal-cv-three.vercel.app" }
-  ]
-}
+    "rewrites": [
+      {"source": "/submit", "destination": "https://personal-cv-three.vercel.app/submit"},
+      {"source": "/(.*)", "destination": "https://personal-cv-three.vercel.app/$1"}
+    ]
+  }
+  
