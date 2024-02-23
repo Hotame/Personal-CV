@@ -1,7 +1,7 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
-import { dirname } from "path";
+import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -9,15 +9,15 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('/public'));
-app.use('/images', express.static('/images'));
+app.use(express.static(join(__dirname, 'public')));
+app.use('/images', express.static(join(__dirname, 'images')));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(join(__dirname, 'index.html'));
 });
 
 app.post('/submit', (req, res) => {
-    const {email, message } = req.body;
+    const { email, message } = req.body;
     console.log(req.body);
 
     const transporter = nodemailer.createTransport({
