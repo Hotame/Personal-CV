@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'public', 'index.html'));
 });
 
-app.post('/submit', (req, res) => {
+app.post('/', (req, res) => {
     const { email, message } = req.body;
     console.log(req.body);
 
