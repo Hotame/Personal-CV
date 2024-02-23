@@ -1,7 +1,7 @@
 {
     "rewrites": [
-      {"source": "/", "destination": "https://personal-kjg2054g9-hotames-projects.vercel.app"},
-      {"source": "/submit", "destination": "https://personal-kjg2054g9-hotames-projects.vercel.app/submit"}
+      {"source": "/submit", "destination": "http://localhost:3000/submit"},
+      {"source": "/:match*", "destination": "http://localhost:3000/:match*"}
     ]
   }
   
